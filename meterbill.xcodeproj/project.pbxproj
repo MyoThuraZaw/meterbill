@@ -12,6 +12,7 @@
 		E34E011322C7F9EB00B91452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E011122C7F9EB00B91452 /* Main.storyboard */; };
 		E34E011522C7F9EB00B91452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34E011422C7F9EB00B91452 /* Assets.xcassets */; };
 		E34E011822C7F9EB00B91452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E011622C7F9EB00B91452 /* LaunchScreen.storyboard */; };
+		E34E012022C8073300B91452 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E011F22C8073300B91452 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E34E011422C7F9EB00B91452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E34E011722C7F9EB00B91452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34E011922C7F9EB00B91452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E34E011F22C8073300B91452 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E34E010D22C7F9EB00B91452 /* AppDelegate.swift */,
 				E34E010F22C7F9EB00B91452 /* ViewController.swift */,
 				E34E011122C7F9EB00B91452 /* Main.storyboard */,
+				E34E011F22C8073300B91452 /* HomeViewController.swift */,
 				E34E011422C7F9EB00B91452 /* Assets.xcassets */,
 				E34E011622C7F9EB00B91452 /* LaunchScreen.storyboard */,
 				E34E011922C7F9EB00B91452 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				E34E011022C7F9EB00B91452 /* ViewController.swift in Sources */,
 				E34E010E22C7F9EB00B91452 /* AppDelegate.swift in Sources */,
+				E34E012022C8073300B91452 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
