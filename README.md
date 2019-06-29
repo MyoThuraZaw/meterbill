@@ -1,2 +1,2 @@
 # meterbill
-New Electric charges according to Notice 7/2019
+New Electricity charges according to Notice 7/2019
