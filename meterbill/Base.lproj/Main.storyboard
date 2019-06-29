@@ -178,6 +178,18 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYu-KQ-XdS">
+                                <rect key="frame" x="107.5" y="607" width="160" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.61643835616438358" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GQP-7A-pNW"/>
+                                    <constraint firstAttribute="width" constant="160" id="Non-5J-oO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -189,6 +201,8 @@
                             <constraint firstItem="sqp-IM-VZo" firstAttribute="top" secondItem="O8Y-ew-G4k" secondAttribute="bottom" constant="22" id="N0h-ux-uot"/>
                             <constraint firstItem="1WX-aA-LAs" firstAttribute="height" secondItem="sqp-IM-VZo" secondAttribute="height" id="QK8-6p-IKF"/>
                             <constraint firstItem="sqp-IM-VZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="SMH-WJ-Ja1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jYu-KQ-XdS" secondAttribute="bottom" constant="20" id="c4F-ve-pnP"/>
+                            <constraint firstItem="jYu-KQ-XdS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eJ4-kn-r0G"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mvu-fh-fBu" secondAttribute="trailing" constant="26" id="ezO-zR-o4d"/>
                             <constraint firstItem="O8Y-ew-G4k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="fdY-X7-DHY"/>
                             <constraint firstItem="O8Y-ew-G4k" firstAttribute="top" secondItem="RAS-Zs-UbT" secondAttribute="bottom" id="jNn-VZ-b0D"/>
@@ -210,6 +224,7 @@
                         <outlet property="fourthTierAmount" destination="cUO-vb-Ayk" id="JDG-dR-UUz"/>
                         <outlet property="inputUnit" destination="aTM-MG-ngz" id="Gav-F2-Bpv"/>
                         <outlet property="leftOval" destination="FQ9-Fu-adW" id="epi-zF-JBE"/>
+                        <outlet property="resultAmount" destination="jYu-KQ-XdS" id="Loo-YF-86h"/>
                         <outlet property="rightOval" destination="WhH-LC-p2h" id="Vjt-XT-bix"/>
                         <outlet property="secondTierAmount" destination="uvB-9J-xhA" id="fMA-mU-3sl"/>
                         <outlet property="seventhTierAmount" destination="UOO-rB-sfh" id="tjH-8W-DoU"/>

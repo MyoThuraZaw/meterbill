@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var sixthTierAmount: UILabel!
     @IBOutlet weak var seventhTierAmount: UILabel!
     
+    @IBOutlet weak var resultAmount: UILabel!
     
     
     override func viewDidLoad() {
@@ -60,6 +61,8 @@ class HomeViewController: UIViewController {
                 seventhTier = calculateSeventhTier(totalUnits: totalUnits)
             }
         }
+        
+        showResult()
     }
 
     
@@ -134,6 +137,7 @@ class HomeViewController: UIViewController {
     func showResult() {
         let result = firstTier + secondTier + thirdTier + fourthTier + fifthTier + sixthTier + seventhTier
         
+        resultAmount.text = String(result)
     }
     
     /*
