@@ -46,6 +46,9 @@ class HomeViewController: UIViewController {
         
     }
 
+    @IBAction func showInfo(_ sender: UIButton) {
+        performSegue(withIdentifier: "infoSegue", sender: nil)
+    }
     
     @IBAction func calculateAmount(_ sender: UIButton) {
         

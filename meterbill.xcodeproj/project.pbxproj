@@ -13,6 +13,7 @@
 		E34E011522C7F9EB00B91452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34E011422C7F9EB00B91452 /* Assets.xcassets */; };
 		E34E011822C7F9EB00B91452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34E011622C7F9EB00B91452 /* LaunchScreen.storyboard */; };
 		E34E012022C8073300B91452 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E011F22C8073300B91452 /* HomeViewController.swift */; };
+		E34E012222C825BA00B91452 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E012122C825BA00B91452 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E34E011722C7F9EB00B91452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34E011922C7F9EB00B91452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E34E011F22C8073300B91452 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E34E012122C825BA00B91452 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		E34E010122C7F9EB00B91452 = {
 			isa = PBXGroup;
 			children = (
+				E34E012122C825BA00B91452 /* InfoViewController.swift */,
 				E34E010C22C7F9EB00B91452 /* meterbill */,
 				E34E010B22C7F9EB00B91452 /* Products */,
 			);
@@ -140,6 +143,7 @@
 			files = (
 				E34E011022C7F9EB00B91452 /* ViewController.swift in Sources */,
 				E34E010E22C7F9EB00B91452 /* AppDelegate.swift in Sources */,
+				E34E012222C825BA00B91452 /* InfoViewController.swift in Sources */,
 				E34E012022C8073300B91452 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
