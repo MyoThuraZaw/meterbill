@@ -10,13 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    var firstTier: Int = 0
-    var secondTier: Int = 0
-    var thirdTier: Int = 0
-    var fourthTier: Int = 0
-    var fifthTier: Int = 0
-    var sixthTier: Int = 0
-    var seventhTier: Int = 0
+    var tierLabels: [UILabel] = []
+    var tiers: [Int] = Array(repeating: 0, count: 7)
+    
+    let unitRanges: [Int] = [0, 30, 50, 75, 100, 150, 200]
+    let unitCharges: [Int] = [35, 50, 70, 90, 110, 120, 125]
     
     @IBOutlet weak var leftOval: UIView!
     @IBOutlet weak var rightOval: UIView!
@@ -35,7 +33,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var resultAmount: UILabel!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +41,8 @@ class HomeViewController: UIViewController {
         rightOval.layer.cornerRadius = rightOval.frame.width / 2
         
         btnCalculate.layer.cornerRadius = btnCalculate.frame.width / 2
+        
+        tierLabels = [firstTierAmount, secondTierAmount, thirdTierAmount, fourthTierAmount, fifthTierAmount, sixthTierAmount, seventhTierAmount]
         
     }
 
@@ -54,91 +54,42 @@ class HomeViewController: UIViewController {
         
         if let inputString = inputUnit.text {
             if let totalUnits = Int(inputString) {
-            
-                firstTier = calculateFirstTier(totalUnits: totalUnits)
-                secondTier = calculateSecondTier(totalUnits: totalUnits)
-                thirdTier = calculateThirdTier(totalUnits: totalUnits)
-                fourthTier = calculateFourthTier(totalUnits: totalUnits)
-                fifthTier = calculateFifthTier(totalUnits: totalUnits)
-                sixthTier = calculateSixthTier(totalUnits: totalUnits)
-                seventhTier = calculateSeventhTier(totalUnits: totalUnits)
+                for i in 0..<tiers.count {
+                    tiers[i] = calculate(totalUnits: totalUnits, tier: i)
+                }
             }
         }
-        
+    
         showResult()
     }
+  
+    func calculate(totalUnits: Int,tier i: Int) -> Int {
 
-    
-    func calculateFirstTier(totalUnits: Int) -> Int {
-        if totalUnits > 0 && totalUnits <= 30{
-            return totalUnits * 35
-        } else if totalUnits > 30 {
-            return 30 * 35
+        if i < unitRanges.count - 1 {
+            if totalUnits > unitRanges[i] && totalUnits <= unitRanges[i+1] {
+                return (totalUnits - unitRanges[i]) * unitCharges[i]
+            } else if totalUnits > unitRanges[i+1] {
+                return (unitRanges[i+1] - unitRanges[i]) * unitCharges[i]
+            } else {
+                return 0
+            }
         } else {
-            return 0
+            return totalUnits > unitRanges[i] ? ((totalUnits - unitRanges[i]) * unitCharges[i]) : 0
         }
-    }
-    
-    func calculateSecondTier(totalUnits: Int) -> Int {
-        if totalUnits > 30 && totalUnits <= 50 {
-            return (totalUnits - 30) * 50
-        } else if totalUnits > 50{
-            return 20 * 50
-        } else {
-            return 0
-        }
-    }
-    
-    func calculateThirdTier(totalUnits: Int) -> Int {
-        if totalUnits > 50 && totalUnits <= 75 {
-            return (totalUnits - 50) * 70
-        } else if totalUnits > 75 {
-            return 25 * 70
-        } else {
-            return 0
-        }
-    }
-    
-    func calculateFourthTier(totalUnits: Int) -> Int {
-        if totalUnits > 75 && totalUnits <= 100 {
-            return (totalUnits - 75) * 90
-        } else if totalUnits > 100 {
-            return 25 * 90
-        } else {
-            return 0
-        }
+
     }
 
-    func calculateFifthTier(totalUnits: Int) -> Int {
-        if totalUnits > 100 && totalUnits <= 150 {
-            return (totalUnits - 100) * 110
-        } else if totalUnits > 150 {
-            return 50 * 110
-        } else {
-            return 0
-        }
-    }
-    
-    func calculateSixthTier(totalUnits: Int) -> Int {
-        if totalUnits > 150 && totalUnits <= 200 {
-            return (totalUnits - 150) * 120
-        } else if totalUnits > 200{
-            return 50 * 120
-        } else {
-            return 0
-        }
-    }
-    
-    func calculateSeventhTier(totalUnits: Int) -> Int {
-        if totalUnits > 200 {
-            return (totalUnits - 200) * 125
-        } else {
-            return 0
-        }
-    }
     
     func showResult() {
-        let result = firstTier + secondTier + thirdTier + fourthTier + fifthTier + sixthTier + seventhTier
+        var result: Int = 0
+        
+        for tier in tiers {
+            result += tier
+        }
+        
+        for i in 0..<tierLabels.count {
+            tierLabels[i].text = String(tiers[i])
+        }
         
         resultAmount.text = String(result)
     }
